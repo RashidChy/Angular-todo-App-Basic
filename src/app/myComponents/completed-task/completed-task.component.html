@@ -1,0 +1,11 @@
+<h1 class="text-gray-700 text-2xl font-extrabold mb-11 ml-5">Completed Tasks . . .</h1>
+
+<div class="ml-11" *ngFor="let todo of todos">
+
+    <div *ngIf="todo.isCompleted === true">
+
+      <app-todo-item [todo]="todo" (removeTodo)="remove($event)"></app-todo-item>
+
+    </div>
+
+  </div>

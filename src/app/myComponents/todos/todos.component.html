@@ -1,0 +1,20 @@
+  
+  <div class="container mx-auto px-4">
+
+    <app-add-todo (addTodo)="addTodo($event)"></app-add-todo>
+
+    <br>
+    
+    <div *ngFor="let todo of todos">
+
+      <div *ngIf="todo.isCompleted === false">
+
+        <app-todo-item [todo]="todo" (deleteTodo)="todoDelete($event)" (removeTodo)="removeTodo($event)"></app-todo-item>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
